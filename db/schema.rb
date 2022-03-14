@@ -32,10 +32,8 @@ ActiveRecord::Schema.define(version: 2022_03_12_190704) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "deck_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["deck_id"], name: "index_games_on_deck_id"
   end
 
   create_table "player_cards", force: :cascade do |t|

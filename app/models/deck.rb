@@ -1,7 +1,6 @@
 class Deck < ApplicationRecord
-    belongs_to :game, optional: true
+    belongs_to :game
     has_many :cards
-
     @deck_of_cards = nil
 
     def self.shuffle_cards

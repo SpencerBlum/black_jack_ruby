@@ -5,11 +5,11 @@ class RunController < ApplicationController
         # Player.destroy_all
         # Deck.destroy_all
         # create deck
-        deck1 = Deck.new()
-        deck1.save
         # Start a new game with deck
-        g1 = Game.new(deck_id:deck1[:id])
+        g1 = Game.new()
         g1.save
+        deck1 = Deck.new(game_id:g1[:id])
+        deck1.save
         # Add a game to deck
         deck1.update(game_id:g1.id)
         Card.destroy_all
