@@ -10,10 +10,9 @@ In this project you will be able to player a game of 21
 
 ## Run App
 
-@@ rails runner ./bin/run.rb] @@
+##### rails runner ./bin/run.rb
 ## Run tests
-
-@@ bundle exec rspec @@
+##### bundle exec rspec
 
 ## Gems
 
