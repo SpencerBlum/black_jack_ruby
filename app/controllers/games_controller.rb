@@ -4,8 +4,8 @@ class GamesController < ApplicationController
         player = Player.find_by(id:player_id)
         game = Game.find_by(id:game_id)
         dealer = game.players.find_by(isDealer: true)
-        dealer_cards = dealer.cards.where(deck_id: game.deck_id)
-        player_cards = player.cards.where(deck_id: game.deck_id)
+        dealer_cards = dealer.cards.where(deck_id: game.decks[0].id)
+        player_cards = player.cards.where(deck_id: game.decks[0].id)
         game_winner = game.game_winner(dealer_cards, player_cards)
         return game_winner
     end

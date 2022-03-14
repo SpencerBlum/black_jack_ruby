@@ -1,6 +1,7 @@
 class Game < ApplicationRecord
     has_many :player_games
     has_many :players, through: :player_games
+    has_many :decks
 
     def hand_value_and_card_string(player_cards)
         total = 0
