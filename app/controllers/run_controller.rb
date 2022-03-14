@@ -1,6 +1,6 @@
 class RunController < ApplicationController
 
-    #This intialize function will run at the start of every game 
+    #This function will run at the start of every game 
     def create_game
         # Player.destroy_all
         # Deck.destroy_all
@@ -16,7 +16,7 @@ class RunController < ApplicationController
         # Create all card
         create_cards(deck1.id)
         Deck.shuffle_cards
-        # create_dealer(g1.id)
+        # create_dealer
         return g1
     end
     
